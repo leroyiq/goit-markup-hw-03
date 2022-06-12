@@ -11,26 +11,79 @@ body {
   color: var(--color-text);
   background-color: var(--bgcolor);
 }
+
+/* Сбросс отступов */
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* Свойства контейнера */
+.container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  /* outline: 1px solid red; */
+}
+.all-nav {
+  display: flex;
+  align-items: center;
+}
+.border {
+  border-bottom: 1px solid #ececec;
+}
+/* Декоративная полоса под header */
+.head-border {
+  border-bottom: 1px solid #ececec;
+}
+/* Начало оформления лого */
 .logo {
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 25px;
   font-size: 26px;
   font-family: raleway;
   text-decoration: none;
   color: var(--color-text);
 }
 .logo-web {
+  display: flex;
   font-size: 26px;
   font-family: raleway;
   color: var(--hover-focus);
 }
 .logo-footer {
   color: var(--bgcolor);
+  padding-top: 60px;
 }
+/* Конец оформления лого */
+.nav-list {
+  display: flex;
+  margin-left: 93px;
+}
+
 .nav-link {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* outline: 1px solid red; */
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   line-height: 1.14;
   color: var(--color-nav);
+}
+.border {
+  border-bottom: 1px solid #ececec;
+}
+
+.nav-list .nav-item + .nav-item {
+  margin-left: 50px;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -45,7 +98,13 @@ body {
 .back-color {
   background-color: var(--header-footer);
 }
+.contact {
+  margin-left: auto;
+}
 .hero {
+  text-align: center;
+  margin-bottom: 30px;
+
   font-size: 44px;
   font-weight: 900;
   text-transform: uppercase;
@@ -53,12 +112,13 @@ body {
   color: var(--bgcolor);
 }
 .order-service {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   color: #ffffff;
   background-color: var(--hover-focus);
   border: none;
   border-radius: 4px;
-  /* width: 200px; */
-  /* height: 50px; */
   font-size: 16px;
   font-weight: 700;
   padding: 10px 32px;
@@ -74,10 +134,30 @@ body {
   color: var(--color-text);
   background-color: #f5f4fa;
 }
+/* класс скрытия элемента */
 .hide {
-  opacity: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.diff-company {
+  display: flex;
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+.diff-company .hero-item + .hero-item {
+  margin-left: 30px;
 }
 .hero-list {
+  margin-bottom: 10px;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
@@ -89,18 +169,48 @@ body {
   line-height: 1.71;
 }
 .head-style {
+  text-align: center;
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: 1.16;
 }
+.works-list {
+  display: flex;
+  margin-bottom: 94px;
+}
+.work-pic {
+  width: calc((100%-60px) / 3);
+}
+.team-header {
+  padding-top: 94px;
+}
+.team-list {
+  display: flex;
+  margin-bottom: 94px;
+}
+.team-item {
+  width: calc((100%-90px) / 4);
+}
 .team {
+  text-align: center;
+  padding-top: 30px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.18;
 }
 .team-fs {
+  text-align: center;
+  padding-top: 10px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.18;
+}
+.address {
+  padding-bottom: 60px;
+}
+.address .add-list + .add-list {
+  margin-top: 9px;
 }
 .adr-list {
   color: rgba(255, 255, 255, 0.6);
@@ -126,7 +236,14 @@ body {
   line-height: 1.625;
 }
 .filter-btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 94px;
+  margin-bottom: 50px;
   list-style: none;
+}
+.filter-btn .btn-variant + .btn-variant {
+  margin-left: 8px;
 }
 .btn:hover,
 .btn:focus {
@@ -137,6 +254,12 @@ body {
 .btn:active {
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
 }
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: calc((100%-60px) / 3); */
+  padding-bottom: 94px;
+}
 .list > p {
   font-size: 16px;
   font-weight: 400;
@@ -144,4 +267,25 @@ body {
 .list .poster-name {
   font-size: 18px;
   font-weight: 700;
+}
+.poster-name {
+  margin-top: 20px;
+  margin-left: 24px;
+}
+.category-src {
+  margin-top: 4px;
+  margin-left: 24px;
+  padding-bottom: 20px;
+}
+.examples-list {
+  display: block;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+}
+.examples-list:nth-child(3n) {
+  margin-right: 0;
+}
+.examples-list:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
