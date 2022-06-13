@@ -4,6 +4,7 @@
   --hover-focus: #2196f3;
   --color-nav: #212121;
   --header-footer: #2f303a;
+  --team-bg: #f5f4fa;
 }
 
 body {
@@ -23,7 +24,7 @@ ul {
 }
 /* Свойства контейнера */
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
@@ -60,6 +61,8 @@ ul {
 .logo-footer {
   color: var(--bgcolor);
   padding-top: 60px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
 }
 /* Конец оформления лого */
 .nav-list {
@@ -96,6 +99,11 @@ ul {
   color: #757575;
 }
 .back-color {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: var(--header-footer);
+}
+.footer-color {
   background-color: var(--header-footer);
 }
 .contact {
@@ -104,6 +112,9 @@ ul {
 .hero {
   text-align: center;
   margin-bottom: 30px;
+  width: 696px;
+  margin-right: auto;
+  margin-left: auto;
 
   font-size: 44px;
   font-weight: 900;
@@ -125,6 +136,7 @@ ul {
   font-family: roboto;
   cursor: pointer;
   letter-spacing: 0.06em;
+  line-height: 1.87;
 }
 .order-service:hover,
 .order-service:focus {
@@ -150,11 +162,13 @@ ul {
 /* Описание особенностей компании */
 .diff-company {
   display: flex;
-  margin-top: 94px;
-  margin-bottom: 94px;
 }
 .diff-company .hero-item + .hero-item {
   margin-left: 30px;
+}
+.diff {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 /*------END-------- Описание особенностей компании */
 .hero-list {
@@ -173,25 +187,25 @@ ul {
 .head-style {
   text-align: center;
   margin-bottom: 50px;
+  padding-top: 94px;
 
   font-size: 36px;
   line-height: 1.16;
 }
+.works {
+  padding-bottom: 94px;
+}
 .works-list {
   display: flex;
-  margin-bottom: 94px;
-}
-.work-pic {
-  width: calc((100%-60px) / 3);
-}
-.team-header {
-  padding-top: 94px;
+  justify-content: space-between;
 }
 .team-list {
   display: flex;
-  margin-bottom: 94px;
+  padding-bottom: 94px;
+  justify-content: space-between;
 }
 .team-item {
+  background-color: #ffffff;
   border: transparent;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -201,6 +215,7 @@ ul {
   margin-left: 30px;
 }
 .team {
+  margin-bottom: 10px;
   text-align: center;
   padding-top: 30px;
   font-size: 16px;
@@ -209,10 +224,14 @@ ul {
 }
 .team-fs {
   text-align: center;
-  padding-top: 10px;
+
+  padding-bottom: 30px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.18;
+}
+.team-bg {
+  background-color: var(--team-bg);
 }
 .address {
   padding-bottom: 60px;
@@ -246,7 +265,6 @@ ul {
 .filter-btn {
   display: flex;
   justify-content: center;
-  padding-top: 94px;
   margin-bottom: 50px;
   list-style: none;
 }
@@ -265,8 +283,7 @@ ul {
 .examples {
   display: flex;
   flex-wrap: wrap;
-  /* width: calc((100%-60px) / 3); */
-  padding-bottom: 94px;
+  justify-content: space-between;
 }
 .list > p {
   font-size: 16px;
@@ -276,14 +293,17 @@ ul {
   font-size: 18px;
   font-weight: 700;
 }
-.poster-name {
-  margin-top: 20px;
-  margin-left: 24px;
+
+.ex-card {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
-.category-src {
-  margin-top: 4px;
-  margin-left: 24px;
-  padding-bottom: 20px;
+.card {
+  margin-bottom: 30px;
+}
+.card:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
 .examples-list {
   display: block;
@@ -296,4 +316,16 @@ ul {
 }
 .examples-list:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.port {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.name-cards {
+  margin-bottom: 4px;
 }
